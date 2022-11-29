@@ -1,2 +1,2 @@
-# marvel
+# Marvel Comics
 Inlog code challenge 
