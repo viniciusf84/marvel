@@ -1,0 +1,38 @@
+:root {
+  --text-color: #4b4b4b;  
+  --white: #fff;
+  --main-red: #d10000;
+  --hover-red: #ef131d;
+  --checkbox-red: #f0141e;
+  --black-900: #010101;
+  --gray-200: #ebebeb;
+  --gray-500: #949494;
+  --gray-900: #363636;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.wrapper {
+  max-width: 1200px;
+  padding: 0 4px;
+  margin: 0 auto;
+}
+
+.empty {
+  font-size: 2rem;
+  color: var(--main-red);
+  height: 50vh;
+  text-align: center;
+}
