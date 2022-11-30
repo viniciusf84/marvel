@@ -1,12 +1,13 @@
 .list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: flex-start;
+	margin: 0 auto;
+	width: 1200px;
 }
 
 .list ul {
-  padding: 0;
-  margin: 0 0 18px;
+	padding: 0;
+	margin: 0;
 }

@@ -8,33 +8,33 @@ const TIMESTAMP = Number(new Date());
 
 const HASH = md5(TIMESTAMP + PRIVATE_KEY + PUBLIC_KEY);
 
-const getUrl = (type : String) => 
-  `${BASE_URL}${type}?ts=${TIMESTAMP}&apikey=${PUBLIC_KEY}&hash=${HASH}`  
+const getUrl = (type: String) =>
+	`${BASE_URL}${type}?ts=${TIMESTAMP}&apikey=${PUBLIC_KEY}&hash=${HASH}`;
 
-export const getComicsData = async (offset: Number, filterParams? : any) => {
-  console.log(filterParams)
-  try {
-    const response = await axios.get(getUrl('comics'), { 
-      params: {
-        limit: 12, 
-        offset,
-        orderBy: 'issueNumber',
-        ...filterParams
-      } 
-    });
-    
-    return response.data.data.results;
-  } catch (err) {
-    console.log(err);
-  }
+export const getComicsData = async (offset: Number, filterParams?: any) => {
+	try {
+		const response = await axios.get(getUrl('comics'), {
+			params: {
+				limit: 12,
+				offset,
+				format: 'comic',
+				orderBy: 'focDate',
+				...filterParams,
+			},
+		});
+
+		return response.data.data;
+	} catch (err) {
+		console.log(err);
+	}
 };
 
-export const getFiltersData = async (type : string) => {
-  try {
-    const response = await axios.get(getUrl(type));
-    
-    return response.data.data.results;
-  } catch (err) {
-    console.log(err);
-  }
+export const getFiltersData = async (type: string) => {
+	try {
+		const response = await axios.get(getUrl(type));
+
+		return response.data.data.results;
+	} catch (err) {
+		console.log(err);
+	}
 };

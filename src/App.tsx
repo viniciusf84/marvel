@@ -1,25 +1,25 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from './containers/Header';
+import Footer from './containers/Footer';
 
-import List from "./containers/List";
-import FiltersMenu from "./containers/FiltersMenu";
+import List from './containers/List';
+import FiltersMenu from './containers/FiltersMenu';
 
-import { FilterContextProvider } from "./contexts/FilterContext";
+import { FilterContextProvider } from './contexts/FilterContext';
 
-import "./styles/global.css";
+import './styles/global.css';
 
 function App() {
-  return (
-    <FilterContextProvider>
-      <Header />
+	return (
+		<FilterContextProvider>
+			<Header />
 
-      <FiltersMenu />
+			<FiltersMenu />
 
-      <List />
+			<List />
 
-      <Footer text="© 2018 Marvel" />
-    </FilterContextProvider>
-  );
+			<Footer text="© 2022 Marvel" />
+		</FilterContextProvider>
+	);
 }
 
 export default App;

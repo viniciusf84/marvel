@@ -1,0 +1,21 @@
+.socialIcon {
+	font-size: 1.5rem;
+	list-style: none;
+	padding: 15px 15px 11px;
+}
+
+.socialIcon a {
+	color: var(--gray-700);
+}
+
+.socialIcon:hover .facebook {
+	color: var(--facebook);
+}
+
+.socialIcon:hover .youtube {
+	color: var(--youtube);
+}
+
+.socialIcon:hover .twitter {
+	color: var(--twitter);
+}

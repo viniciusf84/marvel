@@ -1,17 +1,27 @@
-.checkbox__wrapper label {	
-	cursor: pointer;
+.checkbox__wrapper {
+	line-height: 1rem;
 }
 
-.checkbox__wrapper input[type="checkbox"] {  
-  -webkit-appearance: none;
-  appearance: none;
-  
-  width:	1.125rem;
-  height: 1.125rem;
-	  
-  margin-right: 0.5rem;
-  border: 1px solid var(--gray-500);
-  outline: none;  
+.checkbox__wrapper label {
+	cursor: pointer;
+	display: flex;
+
+	font-size: 1rem;
+	line-height: 1.2rem;
+}
+
+.checkbox__wrapper input[type='checkbox'] {
+	-webkit-appearance: none;
+	appearance: none;
+
+	display: block;
+	margin: 0 0.8rem 0 0;
+
+	border: 1px solid var(--gray-500);
+	outline: none;
+
+	min-width: 1.125rem;
+	height: 1.125rem;
 }
 
 .checkbox__wrapper input:checked {
@@ -21,10 +31,10 @@
 }
 
 .checkbox__wrapper input:checked::before {
-  content: "\2714";
-  font-size: 1.5em;
-  color: #fff;
-  position: absolute;
-  right: 1px;
-  top: -5px;
+	content: '\2714';
+	font-size: 1.5em;
+	color: #fff;
+	position: absolute;
+	right: 1px;
+	top: -5px;
 }

@@ -1,54 +1,60 @@
-.button {   
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
 }
 
 .button:after {
-  content: '';
-  
-  background-color: var(--black-900);
-  display: block;
-  height: 2px;  
-  width: 100%;
-  
-  position: absolute;
-  top: calc(50% - 1px);
-  left: 0;  
+	content: '';
 
-  z-index: 1;
+	background-color: var(--black-900);
+	display: block;
+	height: 2px;
+	width: 100%;
+
+	position: absolute;
+	top: calc(50% - 1px);
+	left: 0;
+
+	z-index: 1;
 }
 
 .button button {
-  background-color: transparent;
-  border: none;
-  height: 50px;
-  
-  cursor: pointer;
+	background-color: transparent;
+	border: none;
+	height: 50px;
 
-  z-index: 2;
+	cursor: pointer;
+
+	z-index: 2;
 }
 
 .button button:before {
-  content: '';
+	content: '';
 
-  display: block;
-  background-color: var(--main-red);
-  border: none;
+	display: block;
+	background-color: var(--main-red);
+	border: none;
 
-  height: 50px;
-  width: 220px;
-  transform: skew(170deg);   
+	height: 50px;
+	width: 220px;
+	transform: skew(170deg);
+	transition: background-color 0.3s ease;
+}
+
+.button:hover button:before {
+	background-color: var(--button-hover-red);
 }
 
 .button button span {
-  color: var(--white);
-  font-size: 1.05rem;  
-  text-transform: uppercase;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 700;
+	color: var(--white);
+	font-size: 1.2rem;
+	text-transform: uppercase;
 
-  position: relative;
-  top: -32px;
-  pointer-events: none;
+	position: relative;
+	top: -36px;
+	pointer-events: none;
 }
-
