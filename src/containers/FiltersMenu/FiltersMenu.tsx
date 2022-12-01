@@ -109,6 +109,7 @@ export function FiltersMenu() {
 						/>
 					);
 				})}
+
 				<Button
 					text="OK"
 					onClick={() => setApplyFilters(true)}

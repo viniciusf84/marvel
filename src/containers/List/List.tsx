@@ -75,7 +75,7 @@ export function List() {
 
 			{isLoading ? <LoadingContent text={'Loading...'} /> : null}
 
-			{displayLoadMoreButton}
+			<div className="wrapper">{displayLoadMoreButton}</div>
 		</>
 	);
 }

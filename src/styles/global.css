@@ -50,3 +50,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 }
+
+.brand.small {
+	width: 72px;
+}

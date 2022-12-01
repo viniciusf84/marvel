@@ -10,7 +10,7 @@
 
 	background-color: var(--black-900);
 	display: block;
-	height: 2px;
+	height: 1px;
 	width: 100%;
 
 	position: absolute;
@@ -38,8 +38,8 @@
 	border: none;
 
 	height: 50px;
-	width: 220px;
-	transform: skew(170deg);
+	width: 213px;
+	transform: skew(169deg);
 	transition: background-color 0.3s ease;
 }
 
@@ -52,6 +52,7 @@
 	font-weight: 700;
 	color: var(--white);
 	font-size: 1.2rem;
+	letter-spacing: 0.1rem;
 	text-transform: uppercase;
 
 	position: relative;

@@ -24,7 +24,6 @@ export function HeaderMenu() {
 						<a href={item.link}>{item.label}</a>
 					</li>
 				))}
-				;
 			</ul>
 		);
 	}, []);
