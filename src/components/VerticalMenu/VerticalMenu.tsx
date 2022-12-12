@@ -56,12 +56,16 @@ export function VerticalMenu() {
 		return menuItems.map((menu, menuIndex) => {
 			return (
 				<ul key={menuIndex}>
-					{menu.map((item) => {
+					{menu.map((item, itemIndex) => {
 						if (item.isTitle) {
-							return <li className={styles.menu__title}>{item.label}</li>;
+							return (
+								<li key={itemIndex} className={styles.menu__title}>
+									{item.label}
+								</li>
+							);
 						}
 						return (
-							<li>
+							<li key={itemIndex}>
 								<a href={item.link}>{item.label}</a>
 							</li>
 						);

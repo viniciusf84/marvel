@@ -16,7 +16,7 @@ export const getComicsData = async (offset: Number, filterParams?: any) => {
 		const response = await axios.get(getUrl('comics'), {
 			params: {
 				limit: 12,
-				offset,
+				offset: 12,
 				format: 'comic',
 				orderBy: 'focDate',
 				...filterParams,

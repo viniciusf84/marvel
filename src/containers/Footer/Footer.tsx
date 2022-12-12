@@ -19,8 +19,13 @@ export function Footer({ text }: FooterProps) {
 				<img className="brand small" src={Logo} alt="Marvel" />
 
 				<ul className={`${styles.social} flex-default`}>
-					{socialMediaList.map((item) => (
-						<SocialMedia label={item.label} link={item.link} icon={item.icon} />
+					{socialMediaList.map((item, index) => (
+						<SocialMedia
+							key={index}
+							label={item.label}
+							link={item.link}
+							icon={item.icon}
+						/>
 					))}
 				</ul>
 			</div>

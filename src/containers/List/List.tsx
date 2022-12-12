@@ -1,4 +1,5 @@
 import { useEffect, useCallback, useContext, useMemo } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { getComicsData } from '../../services';
 
 import ListItem from '../../components/ListItem';
@@ -46,7 +47,7 @@ export function List() {
 
 			return (
 				<ListItem
-					key={comic.id}
+					key={uuidv4()}
 					src={`${comic.thumbnail.path}/portrait_uncanny.${comic.thumbnail.extension}`}
 					title={comic.title}
 					creators={writers.map((item) => item.name.split(' ')[1])}

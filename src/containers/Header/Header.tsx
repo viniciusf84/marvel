@@ -12,8 +12,9 @@ export function Header() {
 					<img className="brand" src={Logo} alt="Marvel" />
 
 					<ul className={`${styles.social} flex-default`}>
-						{socialMediaList.map((item) => (
+						{socialMediaList.map((item, index) => (
 							<SocialMedia
+								key={index}
 								label={item.label}
 								link={item.link}
 								icon={item.icon}

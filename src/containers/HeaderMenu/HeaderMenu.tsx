@@ -19,8 +19,8 @@ export function HeaderMenu() {
 		return (
 			<ul>
 				<li className={styles.menu__title}>Shop</li>
-				{MenuItems.map((item) => (
-					<li>
+				{MenuItems.map((item, menuItemIndex) => (
+					<li key={menuItemIndex}>
 						<a href={item.link}>{item.label}</a>
 					</li>
 				))}
